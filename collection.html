@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>B7N — Collection</title>
+</head>
+<body>
+
+  <!-- NAVIGATION : retour accueil, ancres vers chaque catégorie, lien panier -->
+  <nav>
+    <a href="Accueil.html">← Retour à l'accueil</a> |
+    <a href="#tshirts">T-Shirts</a> |
+    <a href="#jeans">Jeans</a> |
+    <a href="#sneakers">Sneakers</a> |
+    <a href="#accessoires">Accessoires</a> |
+    <a href="panier.html">Panier</a>
+  </nav>
+
+  <hr>
+
+  <h1>La Collection</h1>
+  <p>Toutes nos pièces disponibles.</p>
+
+  <hr>
+
+  <!-- T-SHIRTS  -->
+  <section id="tshirts">
+    <h2>T-Shirts</h2>
+
+    <!-- Article 1 : T-shirt Oversize Blanc -->
+    <div>
+      <img src="images/tshirt1.jpg" alt="T-shirt oversize blanc"  />
+      <h3>T-shirt Oversize Blanc</h3>
+      <p>Coupe large, coton épais.</p>
+      <p><strong>39 €</strong></p>
+
+      <!-- Menu déroulant pour choisir la taille -->
+      <select class="taille-select">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+
+      <!-- Bouton qui appelle ajouterAuPanier() avec le nom, prix, le bouton lui-même et la catégorie -->
+      <button onclick="ajouterAuPanier('T-shirt Oversize Blanc', 39, this, 'tshirt')">
+        Ajouter au panier
+      </button>
+    </div>
+
+    <!-- Article 2 : T-shirt Washed Gris -->
+    <div>
+      <img src="images/tshirt2.jpg" alt="T-shirt lavé gris"  />
+      <h3>T-shirt Washed Gris</h3>
+      <p>Effet délavé, coupe regular.</p>
+      <p><strong>42 €</strong></p>
+
+      <select class="taille-select">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+
+      <button onclick="ajouterAuPanier('T-shirt Washed Gris', 42, this, 'tshirt')">
+        Ajouter au panier
+      </button>
+    </div>
+
+    <!-- Article 3 : T-shirt Washed Gris Délavé -->
+    <div>
+      <img src="images/tshirt3.jpg" alt="T-shirt lavé gris délavé"  />
+      <h3>T-shirt Washed Gris Délavé</h3>
+      <p>Effet délavé, coupe regular.</p>
+      <p><strong>42 €</strong></p>
+
+      <select class="taille-select">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+
+      <button onclick="ajouterAuPanier('T-shirt Washed Gris Délavé', 42, this, 'tshirt')">
+        Ajouter au panier
+      </button>
+    </div>
+
+  </section>
+
+  <hr>
+
+  <!-- JEANS -->
+  <section id="jeans">
+    <h2>Jeans</h2>
+
+    <!-- Article 1 : Jean Baggy Brut — tailles numériques (pantalons) -->
+    <div>
+      <img src="images/jean1.jpg" alt="Jean baggy bleu"  />
+      <h3>Jean Baggy Brut</h3>
+      <p>Coupe large, denim non traité.</p>
+      <p><strong>89 €</strong></p>
+
+      <select class="taille-select">
+        <option value="36">36</option>
+        <option value="38">38</option>
+        <option value="40">40</option>
+        <option value="42">42</option>
+      </select>
+
+      <button onclick="ajouterAuPanier('Jean Baggy Brut', 89, this, 'jeans')">Ajouter au panier</button>
+    </div>
+
+    <!-- Article 2 : Jean Slim Noir -->
+    <div>
+      <img src="images/jean2.jpg" alt="Jean slim noir" />
+      <h3>Jean Slim Noir</h3>
+      <p>Coupe ajustée, stretch léger.</p>
+      <p><strong>79 €</strong></p>
+
+      <select class="taille-select">
+        <option value="36">36</option>
+        <option value="38">38</option>
+        <option value="40">40</option>
+        <option value="42">42</option>
+      </select>
+
+      <button onclick="ajouterAuPanier('Jean Slim Noir', 79, this, 'jeans')">Ajouter au panier</button>
+    </div>
+
+    <!-- Article 3 : Jean Cargo Kaki -->
+    <div>
+      <img src="images/jean3.jpg" alt="Jean cargo kaki" />
+      <h3>Jean Cargo Kaki</h3>
+      <p>Poches latérales, coupe droite.</p>
+      <p><strong>95 €</strong></p>
+
+      <select class="taille-select">
+        <option value="36">36</option>
+        <option value="38">38</option>
+        <option value="40">40</option>
+        <option value="42">42</option>
+      </select>
+
+      <button onclick="ajouterAuPanier('Jean Cargo Kaki', 95, this, 'jeans')">Ajouter au panier</button>
+    </div>
+
+  </section>
+
+  <hr>
+
+  <!-- SNEAKERS -->
+  <section id="sneakers">
+    <h2>Sneakers</h2>
+
+    <!-- Article 1 : Low Clean Blanc — tailles pointures -->
+    <div>
+      <img src="images/sneaker1.jpg" alt="Sneaker blanche basse"  />
+      <h3>Low Clean Blanc</h3>
+      <p>Cuir lisse, semelle crantée.</p>
+      <p><strong>110 €</strong></p>
+
+      <select class="taille-select">
+        <option value="39">39</option>
+        <option value="40">40</option>
+        <option value="41">41</option>
+        <option value="42">42</option>
+        <option value="43">43</option>
+        <option value="44">44</option>
+      </select>
+
+      <button onclick="ajouterAuPanier('Low Clean Blanc', 110, this, 'sneakers')">Ajouter au panier</button>
+    </div>
+
+    <!-- Article 2 : High Black -->
+    <div>
+      <img src="images/sneaker2.jpg" alt="Sneaker noire montante"  />
+      <h3>High Black</h3>
+      <p>Tige montante, lacets plats.</p>
+      <p><strong>125 €</strong></p>
+
+      <select class="taille-select">
+        <option value="39">39</option>
+        <option value="40">40</option>
+        <option value="41">41</option>
+        <option value="42">42</option>
+        <option value="43">43</option>
+        <option value="44">44</option>
+      </select>
+
+      <button onclick="ajouterAuPanier('High Black', 125, this, 'sneakers')">Ajouter au panier</button>
+    </div>
+
+    <!-- Article 3 : Chunky Beige -->
+    <div>
+      <img src="images/sneaker3.jpg" alt="Sneaker beige chunky"  />
+      <h3>Chunky Beige</h3>
+      <p>Semelle épaisse, look 2000s.</p>
+      <p><strong>135 €</strong></p>
+
+      <select class="taille-select">
+        <option value="39">39</option>
+        <option value="40">40</option>
+        <option value="41">41</option>
+        <option value="42">42</option>
+        <option value="43">43</option>
+        <option value="44">44</option>
+      </select>
+
+      <button onclick="ajouterAuPanier('Chunky Beige', 135, this, 'sneakers')">Ajouter au panier</button>
+    </div>
+
+  </section>
+
+  <hr>
+
+  <!-- ACCESSOIRES -->
+  <section id="accessoires">
+    <h2>Accessoires</h2>
+
+    <!-- Article 1 : Casquette — taille unique donc une seule option dans le select -->
+    <div>
+      <img src="images/casquette.jpg" alt="Casquette noire"  />
+      <h3>Casquette B7N</h3>
+      <p>5 panneaux, broderie avant.</p>
+      <p><strong>35 €</strong></p>
+
+      <select class="taille-select">
+        <option value="unique">Taille unique</option>
+      </select>
+
+      <button onclick="ajouterAuPanier('Casquette B7N', 35, this, 'accessoires')">Ajouter au panier</button>
+    </div>
+
+    <!-- Article 2 : Tote Bag -->
+    <div>
+      <img src="images/sac.jpg" alt="Tote bag" width="200" />
+      <h3>Tote Bag Canvas</h3>
+      <p>100% coton, impression sérigraphie.</p>
+      <p><strong>22 €</strong></p>
+
+      <select class="taille-select">
+        <option value="unique">Taille unique</option>
+      </select>
+
+      <button onclick="ajouterAuPanier('Tote Bag Canvas', 22, this, 'accessoires')">Ajouter au panier</button>
+    </div>
+
+    <!-- Article 3 : Chaussettes -->
+    <div>
+      <img src="images/chaussettes.jpg" alt="Chaussettes logo"  />
+      <h3>Chaussettes Logo</h3>
+      <p>Pack de 3 paires, coton doux.</p>
+      <p><strong>18 €</strong></p>
+
+      <select class="taille-select">
+        <option value="unique">Taille unique</option>
+      </select>
+
+      <button onclick="ajouterAuPanier('Chaussettes Logo', 18, this, 'accessoires')">Ajouter au panier</button>
+    </div>
+
+  </section>
+
+  <hr>
+
+  <!-- FOOTER -->
+  <footer>
+    <p> 2026 B7N — Tous droits réservés.</p>
+    <a href="Accueil.html">Retour à l'accueil</a>
+  </footer>
+
+  <!-- On charge le script compteur.js en bas de page pour que le HTML soit chargé avant le JS -->
+  <script src="compteur.js"></script>
+
+</body>
+</html>

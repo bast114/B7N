@@ -1,0 +1,287 @@
+/* STYLE.CSS — Feuille de style globale du site B7N */
+
+
+/* RESET : supprime les marges/paddings par défaut du navigateur
+   box-sizing: border-box = la largeur inclut padding et bordure */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE : fond noir, texte blanc cassé, police Arial */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0f0f0f;
+  color: #f0f0f0;
+}
+
+/* LIENS : pas de soulignement, couleur blanche par défaut */
+a {
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+/* SÉPARATEUR : ligne fine gris foncé */
+hr {
+  border: none;
+  border-top: 1px solid #222;
+  margin: 0;
+}
+
+
+/*  NAVIGATION  */
+nav {
+  background-color: #0f0f0f;
+  padding: 20px 40px;
+  border-bottom: 1px solid #222;
+}
+
+nav a {
+  margin-right: 20px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Survol : jaune fluo */
+nav a:hover { color: #e8ff00; }
+
+
+/*  TITRES — h1 et h2 partagent le même style de base */
+
+/* Titre principal (page collection) */
+h1 {
+  font-size: 50px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #e8ff00;
+  padding: 40px 40px 10px;
+}
+
+/* Titre de section */
+h2 {
+  font-size: 28px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+/* Paragraphes : gris, interligne aéré */
+p {
+  font-size: 14px;
+  color: #888;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+
+/*  SECTIONS GÉNÉRIQUES */
+section { padding: 60px 40px; }
+
+
+/*  (Accueil — id="accueil") */
+#accueil {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+/* Grand titre B7N en jaune, très grande taille */
+#accueil h1 {
+  font-size: 100px;
+  letter-spacing: 10px;
+  color: #e8ff00;
+  margin-bottom: 20px;
+}
+
+#accueil p { margin-bottom: 30px; }
+
+/* Image responsive avec bordure fine */
+#accueil img {
+  max-width: 100%;
+  border: 1px solid #222;
+}
+/* FORMULAIRE DE CONTACT SIMPLIFIÉ  */
+
+.form-group {
+  margin-bottom: 15px; /* Crée un espace vertical entre chaque bloc de champ */
+}
+
+.form-group label {
+  display: block; /* Force le (Nom, Email...) à se placer au-dessus du champ */
+  margin-bottom: 5px; /* Petit espace entre le texte et la zone de saisie */
+}
+
+.form-group input, .form-group textarea {
+  width: 100%; /* Le champ s'étire sur toute la largeur disponible du bloc */
+  padding: 10px; /* Ajoute du confort de saisie à l'intérieur du champ */
+  background-color: #1a1a1a; /* Fond gris foncé assorti aux cartes produits */
+  border: 1px solid #222; /* Bordure fine et discrète pour délimiter le champ */
+  color: #f0f0f0; /* Couleur du texte saisi par l'utilisateur (blanc cassé) */
+}
+
+/* Style du bouton d'envoi du formulaire */
+.btn-submit {
+  background-color: #e8ff00; /* Couleur jaune fluo emblématique de la marque B7N */
+  color: #0f0f0f;            /* Texte noir pour garantir un excellent contraste */
+  border: none;              /* Supprime la bordure par défaut du bouton */
+  padding: 10px 20px;        /* Donne de l'épaisseur au bouton */
+  font-weight: bold;         /* Met le texte "ENVOYER" en gras */
+  cursor: pointer;           /* Transforme le curseur en main au survol */
+}
+
+/* LIENS JAUNES PARTAGÉS : collection + contact  */
+
+/* Bouton "Voir la collection" : bordure jaune, fond transparent */
+#collection a {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 1px solid #e8ff00;
+  color: #e8ff00;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Survol : fond jaune, texte noir */
+#collection a:hover {
+  background-color: #e8ff00;
+  color: #0f0f0f;
+}
+
+/* Lien email en jaune, soulignement au survol */
+#contact a { color: #e8ff00; }
+#contact a:hover { text-decoration: underline; }
+
+
+/*  FOOTER */
+footer {
+  background-color: #0a0a0a; 
+  text-align: center;
+  padding: 30px;
+  font-size: 12px;
+  color: #444;
+  letter-spacing: 2px;
+}
+
+
+/*  GRILLE PRODUITS (collection.html)
+   Chaque produit est dans un <div> à l'intérieur d'une <section> */
+
+/* Carte produit : affichée en ligne, largeur fixe */
+section div {
+  display: inline-block;
+  vertical-align: top; /* aligne en haut si hauteurs différentes */
+  width: 220px;
+  margin: 15px;
+  background-color: #1a1a1a;
+  padding: 15px;
+  border: 1px solid #222;
+}
+
+/* Survol : bordure jaune */
+section div:hover { border-color: #e8ff00; }
+
+/* Image : prend toute la largeur de la carte */
+section div img {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Nom du produit en majuscules */
+section div h3 {
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* Description en gris */
+section div p {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+/* TABLEAU PANIER  */
+.panier-table {
+  width: 100%;
+  max-width: 600px;     /* Tableau large */
+  margin: 0 auto;       /* Centre le tableau */
+  border-collapse: collapse;
+  font-size: 18px;      /* Écrit gros */
+}
+
+.panier-table th, .panier-table td {
+  border: 1px solid #222;
+  padding: 18px;        /*  cases  */
+  text-align: left;
+}
+
+.panier-table th {
+  background-color: #1a1a1a;
+  color: #e8ff00;       /* Couleur jaune */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.panier-table td {
+  background-color: #111;
+}
+/*  
+ADAPTATION SMARTPHONE 
+ */
+@media screen and (max-width: 768px) {
+
+  /* 1. Ajustement des textes trop grands */
+  #accueil h1 {
+    font-size: 60px; /* Réduit le gros titre pour qu'il rentre dans l'écran */
+  }
+  
+  h1 {
+    font-size: 35px;
+  }
+
+  /* 2. Menu de navigation plus facile à cliquer */
+  nav {
+    padding: 15px 10px;
+    text-align: center;
+  }
+  
+  nav a {
+    display: inline-block;
+    margin: 5px 10px; /* Espace les liens pour éviter les erreurs de clic */
+    font-size: 12px;
+  }
+  
+  section { padding: 30px 15px; } /* evite trop de vide sur le cotée du telephone */
+
+  /* 3. Transformation de la grille de produits */
+  #tshirts, #jeans, #sneakers, #accessoires {
+    display: flex;
+    flex-direction: column; /* Aligne les produits les uns sous les autres */
+    align-items: center;
+    padding: 30px 10px;
+  }
+
+  /* Cible uniquement les cartes produits des catégories */
+  #tshirts div, #jeans div, #sneakers div, #accessoires div {
+    display: block;
+    width: 90%; /* Prend presque toute la largeur disponible */
+    max-width: 280px; /* Évite que le produit devienne trop géant */
+    margin: 15px 0;
+	text-align: center;	/* Aligne verticalement */
+  }
+  
+  /* 4. Tableau du panier */
+  .panier-table {
+    font-size: 15px; /* Réduit un peu l'écriture pour que le tableau ne déborde pas */
+  }
+  
+  .panier-table th, .panier-table td {
+    padding: 10px; /* Moins d'espace interne pour gagner de la place */
+  }
+}

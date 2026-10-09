@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />  
+  <title>B7N — Boutique</title>
+</head>
+<body>
+
+  <!-- NAVIGATION : liens vers les sections de la page et vers le panier -->
+  <nav>
+  | <a href="#accueil">Accueil</a> |
+    <a href="#collection">Collection</a> |
+    <a href="#apropos">À propos</a> |
+    <a href="#contact">Contact</a> |
+    <a href="panier.html">Panier</a> 
+  </nav>
+
+  <hr>
+
+  <!-- SECTION ACCUEIL : titre de la boutique et image principale -->
+  <section id="accueil">
+    <h1>B7N</h1>
+    <p>La boutique de Bastien — mode urbaine & pièces uniques.</p>
+
+    <!-- Image d'accroche de la page d'accueil -->
+    <img src="images/ImageAccueil.jpg" alt="Visuel principal de la boutique"  />
+  </section>
+
+  <hr>
+
+  <!-- SECTION COLLECTION : lien vers la page collection.html -->
+  <section id="collection">
+    <h2>Collection</h2>
+    <p>Découvrez toutes nos pièces.</p>
+    <a href="collection.html">Voir la collection</a>
+  </section>
+
+  <hr>
+
+  <!-- SECTION À PROPOS : présentation de la boutique -->
+  <section id="apropos">
+    <h2>À propos</h2>
+    <p>B7N est une boutique fondée par Bastien, avec une vision simple : des vêtements qui ont du caractère.</p>
+  </section>
+
+  <hr>
+
+ <!-- SECTION CONTACT :  --> 
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Une question ? Écrivez-nous via le formulaire ci-dessous ou à : <a href="mailto:contact@B7N.fr">contact@B7N.fr</a></p>
+    
+    <!-- Début du formulaire - class "contact-form" pour appliquer les styles CSS -->
+    <form action="#" method="POST" class="contact-form">
+      
+      <!-- Groupe Nom : label + zone de saisie de texte -->
+      <div class="form-group">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required> <!-- "required" rend le champ obligatoire -->
+      </div>
+      
+      <!-- Groupe Email : label + validation automatique du format email -->
+      <div class="form-group">
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      
+      <!-- Groupe Message : label + zone de texte multiligne (5 lignes de hauteur) -->
+      <div class="form-group">
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      
+      <!-- Bouton de soumission du formulaire -->
+      <button type="submit" class="btn-submit">Envoyer</button>
+    </form>
+  </section>
+  <hr>
+
+  <!-- FOOTER  -->
+  <footer>
+    <p> 2026 B7N — Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>B7N — Panier</title>
+</head>
+<body>
+
+  <!-- NAVIGATION : liens vers les pages principales du site -->
+  <nav>
+  | <a href="Accueil.html">Accueil</a> |
+    <a href="collection.html">Collection</a> |
+    <a href="panier.html">Panier</a>
+  </nav>
+
+  <hr>
+
+  <!-- TITRE DE LA PAGE -->
+  <h1>Mon Panier</h1>
+  <p style="text-align:center;">Récapitulatif de vos articles.</p>
+
+  <hr>
+
+  <!-- SECTION TABLEAU DES ARTICLES
+       Affiche le nombre d'articles ajoutés par catégorie.
+       Les <span> sont vides au chargement (valeur "0") et sont mis à jour
+       dynamiquement par la fonction afficherPanier() dans compteur.js -->
+  <section id="articles">
+    <table class="panier-table">
+      <thead>
+        <tr>
+          <th>Catégorie</th>
+          <th>Quantité</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- Ligne T-shirts : id="qty-tshirt" est ciblé par le JS pour afficher le compteur -->
+        <tr>
+          <td>T-shirts</td>
+          <td><span id="qty-tshirt">0</span></td>
+        </tr>
+
+        <!-- Ligne Jeans -->
+        <tr>
+          <td>Jeans</td>
+          <td><span id="qty-jeans">0</span></td>
+        </tr>
+
+        <!-- Ligne Sneakers -->
+        <tr>
+          <td>Sneakers</td>
+          <td><span id="qty-sneakers">0</span></td>
+        </tr>
+
+        <!-- Ligne Accessoires -->
+        <tr>
+          <td>Accessoires</td>
+          <td><span id="qty-accessoires">0</span></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </section>
+
+  <hr>
+
+  <!-- SECTION TOTAL
+       id="total" est utilisé par afficherPanier() pour vérifier qu'on est bien
+       sur cette page (si l'id n'existe pas, la fonction s'arrête) -->
+  <section id="total" style="text-align: center;">
+
+    <!-- Affichage du prix total en euros, mis à jour par le JS -->
+    <!-- id="total-qty" est ciblé par afficherPanier() pour écrire le montant -->
+    <p style="font-size: 22px; font-weight: bold; margin-bottom: 20px;">
+      Total : <span id="total-qty" style="color: #e8ff00;">0 €</span>
+    </p>
+
+    <!-- BOUTON VIDER LE PANIER
+         Caché par défaut (display:none), il est rendu visible par le JS
+         uniquement si le panier contient au moins un article.
+         Au clic, appelle viderPanier() dans compteur.js qui supprime
+         le localStorage et remet tous les compteurs à 0 -->
+    <button id="bouton-vider" onclick="viderPanier()" style="display:none; background:#ff4444; color:white; border:none; padding:10px 20px; font-weight:bold; cursor:pointer;">
+      Vider le panier
+    </button>
+
+  </section>
+
+  <hr>
+
+  <!-- FOOTER -->
+  <footer>
+    <p> 2026 B7N — Tous droits réservés.</p>
+  </footer>
+
+  <!-- Chargement du script en bas de page pour que tous les éléments HTML
+       soient déjà créés avant que le JS essaie de les manipuler.
+       compteur.js contient : ajouterAuPanier(), afficherPanier(), viderPanier() -->
+  <script src="compteur.js"></script>
+
+</body>
+</html>
